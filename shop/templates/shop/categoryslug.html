@@ -14,7 +14,7 @@
     <div class="card d-inline"> 
         <img src="/media/{{i.image}}" class="card-img-top" alt="...">
         <div class="card-body p-3">
-        <a href="http://127.0.0.1:8000/shop/products/prod={{i.id}}"><h5 class="card-title" id="namepr{{i.id}}" style="font-size: medium;">{{i.product_name}}</h5></a>
+        <a href="/shop/products/prod={{i.id}}"><h5 class="card-title" id="namepr{{i.id}}" style="font-size: medium;">{{i.product_name}}</h5></a>
         <p class="card-text my-1" style="font-size: small;">{{i.desc| slice:"0:150"}}...</p>
         <p class="card-text my-1" style="font-size: small;"><b>Price : </b><span  id="pricepr{{i.id}}">{{i.price}}</span></p>
         <p class="card-text"><small class="text-muted">Publication Date: {{i.pub_date}}</small></p>
