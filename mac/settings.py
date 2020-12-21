@@ -25,7 +25,7 @@ SECRET_KEY = 'gx7ipxeaapz8ic1wr#nn7xnrg^^j5mcxt_f)ktvtyb+hge6p4-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fathomless-thicket-63129.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['gravitystores.herokuapp.com','127.0.0.1']
 
 
 # Application definition
