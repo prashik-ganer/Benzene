@@ -55,7 +55,8 @@ def index(request):
     empty_cart = {""}
     if request.user.is_authenticated:
         customer = request.user.customer
-        customer_object = Cart.objects.get(customer=customer)
+        customer_object, created = Cart.objects.get_or_create(customer=customer, cart_items="{" + "}")
+        # customer_object = Cart.objects.get(customer=customer)
         print(customer_object)
         customer_cart_item = customer_object.cart_items
         print("python object : ", customer_cart_item)
@@ -309,6 +310,7 @@ def handleSignup(request):
         else:
             group = Group.objects.get(name='customer')
             myuser.groups.add(group)
+
             
             Customer.objects.create(
                 user=myuser,
@@ -316,6 +318,7 @@ def handleSignup(request):
                 email=email,
 
             )
+
 
             messages.success(request, "Your SHOPHUNT account has been successfully created!")
             return redirect('ShopHome')
