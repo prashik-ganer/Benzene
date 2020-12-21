@@ -15,7 +15,7 @@ from accounts.models import Customer, Seller
 
 from django.http import JsonResponse
 import numpy
-import cv2
+# import cv2
 from pyzbar.pyzbar import decode
     
 
